@@ -26,6 +26,7 @@
  
 ### 마주친 오류
  오류 : 'int' object is not callable
+ 
  해결 : [https://happyeuni.tistory.com/51](https://happyeuni.tistory.com/51) 
  
 ### 참고자료
