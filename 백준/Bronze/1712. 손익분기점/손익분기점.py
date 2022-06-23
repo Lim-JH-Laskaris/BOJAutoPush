@@ -1,0 +1,5 @@
+input_ = input()
+a,b,c = input_.split(' ')
+a,b,c = int(a),int(b),int(c)
+if b>=c: print(-1)
+else : print(a//(c-b) +1)
