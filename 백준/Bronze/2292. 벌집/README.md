@@ -23,4 +23,11 @@
 ### 출력 
 
  <p>입력으로 주어진 방까지 최소 개수의 방을 지나서 갈 때 몇 개의 방을 지나는지 출력한다.</p>
+ 
+### 마주친 오류
+ 오류 : 'int' object is not callable
+ 해결 : [https://happyeuni.tistory.com/51](https://happyeuni.tistory.com/51) 
+ 
+### 참고자료
+ 삼각수 : https://ko.wikipedia.org/wiki/%EC%82%BC%EA%B0%81%EC%88%98
 
