@@ -16,7 +16,7 @@ def make_oblique_line(n):
 x = int(input())
 n = find_n(x,n=approximate_value_of_n(x))
 ol = make_oblique_line(n)
-idx = x-triangular_number(n)-1
+idx = x-triangular_number(n-1)-1
 print('{}/{}'.format(ol[idx][0],ol[idx][1]))
     
 
