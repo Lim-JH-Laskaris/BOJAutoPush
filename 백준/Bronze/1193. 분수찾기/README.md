@@ -79,3 +79,5 @@
 
  <p>첫째 줄에 분수를 출력한다.</p>
 
+### 참고자료
+ https://datascienceschool.net/01%20python/02.04%20파이썬의%20문자열%20형식화.html
