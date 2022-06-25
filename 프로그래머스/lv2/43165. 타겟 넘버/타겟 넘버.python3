@@ -1,0 +1,15 @@
+def search(ls,c,numbers):
+    if c == len(numbers): return ls 
+    lss = []
+    for i in ls:
+        lss.append(i+numbers[c])
+        lss.append(i-numbers[c])
+    c+=1
+    return search(lss,c,numbers)
+    
+    
+def solution(numbers, target):
+    c=0
+    ls = search([0],c,numbers)
+    answer = ls.count(target)
+    return answer
