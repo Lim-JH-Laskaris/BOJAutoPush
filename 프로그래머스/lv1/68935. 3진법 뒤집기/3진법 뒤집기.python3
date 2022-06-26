@@ -1,0 +1,13 @@
+def solution(n):
+    #3진법의 역순까지 바꾸는 코드
+    rev_base = ''
+    while n > 0:
+        n, mod = divmod(n, 3) 
+        rev_base += str(mod)
+        
+    # 3진법 역순을 10진법으로 바꾸는 코드
+    answer = 0
+    for i in range(len(rev_base)):
+        answer += int(rev_base[-(i+1)])*(3**(i))
+        
+    return answer
