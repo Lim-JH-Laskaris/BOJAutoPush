@@ -1,0 +1,12 @@
+def solution(n):
+    # 3진법의 변형
+    rev_base = ''
+    
+    while n > 0:
+        n, mod = divmod(n-1, 3) # 여기서 n-1 대신 n을 넣으면 3진법을 만드는 코드
+        rev_base += str(mod)
+
+    k = rev_base[::-1] 
+    # 아래 relace들을 넣지 않고 위의 주석에서 말한 대로 n-1대신n을 넣으면 3진법 출력
+    k = k.replace('2','4').replace('1','2').replace('0','1') # 순서중요
+    return k
