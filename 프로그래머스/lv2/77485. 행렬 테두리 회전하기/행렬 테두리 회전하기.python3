@@ -1,0 +1,27 @@
+import numpy as np
+import copy
+
+def move_elements(query, matrix):
+    x1,y1,x2,y2 = query
+    x1,y1,x2,y2 = x1-1,y1-1,x2-1,y2-1 # 0부터 시작하는 인덱스로 변환
+    movements = [(0,1)]*(y2-y1) + [(1,0)]*(x2-x1) + [(0,-1)]*(y2-y1) + [(-1,0)]*(x2-x1)
+    x0,y0 = x1,y1
+    previous_element = matrix[x0,y0] 
+    moving_elements = []
+    for mx, my in movements:
+        x0,y0 = x0+mx,y0+my
+        previous_element, matrix[x0, y0] = matrix[x0, y0], previous_element
+        moving_elements.append(int(matrix[x0, y0]))
+    return matrix, moving_elements
+
+def solution(rows, columns, queries):
+    original_matrix = np.array(range(1, rows*columns+1)).reshape((rows,columns)) 
+    changed_matrix  = copy.deepcopy(original_matrix)
+    min_moving_elements_list = []
+    for query in queries:
+        changed_matrix, moving_elements = move_elements(query, changed_matrix)
+        min_moving_elements_list.append(min(moving_elements))
+    return min_moving_elements_list
+    
+    
+        
