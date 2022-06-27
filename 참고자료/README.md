@@ -10,3 +10,4 @@
 ### 문자열 포맷팅 
 [백준-ACM 호텔](github.com/Lim-JH-Laskaris/BOJAutoPush/tree/main/백준/Bronze/10250.%E2%80%85ACM%E2%80%85호텔)
 * https://datascienceschool.net/01%20python/02.04%20파이썬의%20문자열%20형식화%20.html
+* https://www.w3schools.com/python/ref_string_format.asp
