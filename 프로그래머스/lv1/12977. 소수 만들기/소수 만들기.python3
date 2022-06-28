@@ -1,0 +1,25 @@
+# 3000이하 소수의 리스트를 작성 # 소수가 아닌 수는 결국 그보다 작은 소수로 나누어지기 때문
+    # nums의 각원소는 1000이하의 자연수 이므로 3000이하의 소수만 탐색한다
+prime_numbers = [2,3,5,7,11,13] 
+for i in range(14,3000):
+    count1=0
+    for j in prime_numbers:
+        if i%j == 0: count1+=1
+    if count1==0: prime_numbers.append(i)
+            
+                
+def solution(nums):
+    #세 수의 조합을 추출
+    combinations = []
+    l = len(nums)
+    for i in range(l-2):
+        for j in range(i+1,l-1):
+            for k in range(j+1,l):
+                s = (nums[i],nums[j],nums[k])
+                combinations.append(s)
+    #합이 소수인 조합의 개수세기
+    count2=0
+    for i in combinations: 
+        if sum(i) in prime_numbers:count2+=1
+        
+    return count2
