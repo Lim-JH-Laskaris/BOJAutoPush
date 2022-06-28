@@ -1,0 +1,7 @@
+def solution(absolutes, signs):
+    #signs 리스트를 1,-1의 리스트로 바꾼다.
+    signs = [2*int(i)-1 for i in signs]
+    print(signs)
+    #두 리스트의 내적을 구한다. 
+    inner_product = sum([x*y for x,y in zip(absolutes, signs)])
+    return inner_product
