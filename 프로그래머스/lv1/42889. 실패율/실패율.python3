@@ -1,0 +1,16 @@
+def solution(N, stages):
+    # 각 스테이지에 머무르고 있는 사람들의 수를 카운트
+    stay = [0]*(N+2)
+    for i in stages:
+        stay[i] += 1 
+    # 각 스테이지에 머무르고 있거나 패스한 사람들의 수를 카운트 
+    stay_n_pass = [sum(stay[i:]) for i in range(N+2)]
+    # 각 스테이지의 실패율을 구함
+    fail_rate = [stay[i]/stay_n_pass[i] if stay_n_pass[i]!=0 else 0 for i in range(N+2)]
+    # (스테이지(==인덱스), 실패율) 의 값을 원소로 갖는 리스트 생성, 0번스테이지와 n+1번 스테이지 제거
+    fail_rate_tuples = list(enumerate(fail_rate))[1:N+1]
+    # 실패율에 따라 내림차순으로정렬, 인덱스 자체는 오름차순이므로 실패율이 같은 스테이지에 대해서는 고려 하지 않음
+    fail_rate_tuples.sort(key=lambda x:x[1], reverse=True)
+    # 정렬된 인덱스만을 값으로 가지는 리스트 생성
+    answer = [i[0] for i in fail_rate_tuples]
+    return answer
