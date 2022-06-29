@@ -1,0 +1,37 @@
+import numpy as np
+def solution(id_list, report, k):
+    # id_number 딕셔너리 생성
+    id_dict = {id_list[i]:i for i in range(len(id_list))}
+    
+    # report의 "~~ ~~"형태 원소들을 (2 , 6)같은 형태로 변환  
+    splitting = lambda x : x.split()
+    numbering = lambda x : tuple((id_dict[x[0]],id_dict[x[1]]))
+    report_1 = list(map(splitting, report))
+    report_2 = list(map(numbering, report_1))
+    # print(report_2)
+    
+    # 신고행렬을 만든다. 행이 신고자, 열이 피신고자가 되게끔.
+    id_matrix = np.zeros(shape=(len(id_list),len(id_list))).astype(int)
+    for i in report_2:
+        id_matrix[i] = id_matrix[i] + 1
+        
+    # 중복신고를 제거합니다.
+    # id_matrix=np.where(id_matrix==0,0,1) #미사용
+    np.place(id_matrix, id_matrix!= 0, 1)
+    
+    # 피신고자 별로 신고당한 횟수를 합치고, 정지 기준에 해당하는 피신고자를 목록화
+    reported = id_matrix.sum(axis=0)
+    # print(reported)
+    
+    # 정지 기준에 해당하지 않는 신고를 목록에서 제거
+    for i in range(len(reported)):
+        if reported[i]<k:
+            id_matrix[:,i] = 0
+    # print(id_matrix)
+    
+    # 신고자별로 신고횟수를 합친다.(중복제거 및 미정지제거된 상태)
+    answer = list(id_matrix.sum(axis=1))
+    answer = list(map(int,answer))
+    # print(answer)
+    
+    return answer
