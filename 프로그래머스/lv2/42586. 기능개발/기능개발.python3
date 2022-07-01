@@ -1,0 +1,22 @@
+def day_needed(progress_and_speed):
+    progress,speed = progress_and_speed
+    return -((progress - 100)//speed)
+
+def deploy_schedule(days_needed):
+    prior_work = days_needed.pop(0)
+    cc = []
+    c = 1
+    while days_needed:
+        subsequent_work = days_needed.pop(0)
+        if subsequent_work <= prior_work : 
+            c += 1 
+        else : 
+            cc.append(c)
+            c = 1
+            prior_work = subsequent_work
+    cc.append(c)
+    return cc
+
+def solution(progresses, speeds):
+    days_needed = list(map(day_needed, zip(progresses,speeds)))
+    return deploy_schedule(days_needed)
