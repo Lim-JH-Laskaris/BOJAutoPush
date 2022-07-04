@@ -1,15 +1,21 @@
-def custom_divide(a,b):
-    if a%b==0: 
-        print(b)
-        return custom_divide(a//b,b)
-    else :
-        return a
+n = int(input())
+d = 2
 
-
-def prime_factorization(number):
-    prime_number_list = range(2,number+1)
-    for i in prime_number_list:
-        number = custom_divide(number,i)
-        if number == 1 :break
+while d*d <= n:
+    if n % d == 0:
+        print(d)
+        n //= d
+    else:
+        d += 1
+        break
         
-prime_factorization(int(input()))
+while d*d <= n:
+    if n % d == 0:
+        print(d)
+        n //= d
+    else:
+        d += 2 
+if n > 1:
+    print(n)
+    
+    
