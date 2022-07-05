@@ -32,3 +32,8 @@
 
  <p>출력해야하는 명령이 주어질 때마다, 한 줄에 하나씩 출력한다.</p>
 
+### 참고자료
+* exec 관련 https://jvvp.tistory.com/1162
+* 시간초과 관련 https://hooongs.tistory.com/131
+  
+
