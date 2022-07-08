@@ -7,13 +7,12 @@ class ScoreDict(dict):
             ['cpp', 'java', 'python'],  
             ['backend', 'frontend'],
             ['junior', 'senior'],
-            ['chicken', 'pizza'],
+            ['chicken', 'pizza']
         ]
         for i in itertools.product(*self.search_space):
             self['_'.join(i)] = []
         for i in range(len(list_info)):
-            a, b, c, d, e = list_info[i]
-            self[f'{a}_{b}_{c}_{d}'].append(e)
+            self['_'.join(list_info[i][:-1])].append(list_info[i][-1])
         for i in itertools.product(*self.search_space):
             self['_'.join(i)].sort(reverse=True)
         
