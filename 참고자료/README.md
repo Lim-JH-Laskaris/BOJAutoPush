@@ -16,4 +16,7 @@
 * https://hooongs.tistory.com/131
 
 ### exec 관련
-*  https://jvvp.tistory.com/1162
+* https://jvvp.tistory.com/1162
+
+### itertools 공식문서
+* https://docs.python.org/ko/3/library/itertools.html
