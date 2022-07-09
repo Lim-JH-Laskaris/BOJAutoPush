@@ -20,3 +20,6 @@
 
 ### itertools 공식문서
 * https://docs.python.org/ko/3/library/itertools.html
+
+### bisect 공식문서 
+* https://docs.python.org/3.10/library/bisect.html
