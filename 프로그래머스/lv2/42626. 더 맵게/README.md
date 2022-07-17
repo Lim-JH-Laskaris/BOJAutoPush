@@ -1,6 +1,6 @@
 # [level 2] 더 맵게 - 42626 
 
-[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/42626) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/42626) 
 
 ### 성능 요약
 
@@ -61,11 +61,3 @@ Leo가 가진 음식의 스코빌 지수를 담은 배열 scoville과 원하는 
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
-
-### 참고 자료
-
-힙 관련 내용
-
-https://www.daleseo.com/python-heapq/
-
-https://hocheon.tistory.com/70
