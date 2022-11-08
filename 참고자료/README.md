@@ -23,3 +23,7 @@
 
 ### bisect 공식문서 
 * https://docs.python.org/3.10/library/bisect.html
+
+### collections 관련
+Counter : https://www.daleseo.com/python-collections-counter/
+defaultdict : https://dongdongfather.tistory.com/69
