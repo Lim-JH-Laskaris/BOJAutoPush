@@ -1,11 +1,10 @@
-from collections import defaultdict
 from copy import deepcopy
 
 def solution(want, number, discount):
     # discount 기준, 전체 상품 기본 dict 생성. 예) {상품:0}
-    all_product = defaultdict(int)
+    all_product = {}
     for i in list(set(discount)):
-        all_product[i]
+        all_product[i] = 0
         
     # 기본dict를 바탕으로 원하는 상품의 수량을 덧씌움
     want_num_dict = deepcopy(all_product)
