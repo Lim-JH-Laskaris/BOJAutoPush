@@ -20,6 +20,8 @@
 
 ### itertools 공식문서
 * https://docs.python.org/ko/3/library/itertools.html
+* 순열 permutations(list_, n)
+* 조합 combinations(list_, n)
 
 ### bisect 공식문서 
 * https://docs.python.org/3.10/library/bisect.html
