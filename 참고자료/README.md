@@ -29,3 +29,4 @@
 ### collections 관련
 * Counter : https://www.daleseo.com/python-collections-counter/
 * defaultdict : https://dongdongfather.tistory.com/69
+* deque과 기본리스트의 시간복잡도 비교 : https://wellsw.tistory.com/122
