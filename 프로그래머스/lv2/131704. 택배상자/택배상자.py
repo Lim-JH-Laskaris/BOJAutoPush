@@ -9,19 +9,16 @@ def solution(order):
             if   len(queue_belt) and order[i] == queue_belt[0] : 
                 # 기본 벨트가 비어있지 않고 기본벨트 첫번째 원소가 순서목록의 i원소와 일치하면
                 truck.append(queue_belt.popleft()) #기본 벨트 해당 원소를 빼서 트럭에 추가
-                # 다음 순서 뽑기
-                break
+                break # 다음 순서 뽑기
             elif len(queue_belt) and order[i] > queue_belt[0] : 
                 # 기본 벨트가 비어있지 않고 기본벨트 첫번째 원소가 순서목록의 i원소 보다 작으면
                 stack_belt.append(queue_belt.popleft()) # 기본 벨트 해당 원소를 보조 벨트에 추가
-                # 큐 새로 뽑기
-                continue
+                continue # 큐 새로 뽑기
             elif order[i] == stack_belt[-1] :
                 # 기본 벨트가 비어있거나 기본 벨트 첫번째 원소가 순서목록 i원소보다 클 때, 
                 # 이때 보조 벨트 마지막 원소(가장 최근에 추가된 원소)가 순서목록 i원소와 같으면
                 truck.append(stack_belt.pop()) # 보조 벨트 해당 원소를 트럭에 추가
-                # 다음 순서 뽑기
-                break
+                break # 다음 순서 뽑기
             elif order[i] != stack_belt[-1] :
                 # 기본 벨트가 비어있거나 기본 벨트 첫번째 원소가 순서목록 i원소보다 클 때, 
                 # 이때 보조 벨트 마지막 원소(가장 최근에 추가된 원소)가 순서목록 i원소와 다르면
