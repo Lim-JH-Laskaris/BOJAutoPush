@@ -1,2 +1,4 @@
-def solution(M, N):
-    return M*N-1
+solution = lambda M,N : M*N-1 
+"""맨 처음엔 길게 먼저 자르고 그다음 짧은 쪽을 각각 자르는 방식을 생각하여
+max,min 함수를 사용했으나, 식을 풀어보니 순서가 상관이 없었다...
+"""
