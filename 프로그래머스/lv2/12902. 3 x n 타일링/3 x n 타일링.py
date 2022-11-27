@@ -10,6 +10,5 @@ class TilingDict(dict):
 
 def solution(n):
     td = TilingDict()
-    for i in range(n//50):
-        x = td[i*50]
+    for i in range(n//200): td[i*200]
     return td[n]
