@@ -1,0 +1,1 @@
+solution = lambda num1, num2 : int(1000*num1/num2)
