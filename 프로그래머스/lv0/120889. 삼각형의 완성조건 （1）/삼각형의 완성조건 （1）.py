@@ -1,0 +1,1 @@
+solution = lambda sides: 1 if sum(sides)/max(sides) > 2 else 2
