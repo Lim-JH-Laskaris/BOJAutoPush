@@ -1,0 +1,1 @@
+solution = lambda array : [max(array),array.index(max(array))]
