@@ -1,0 +1,1 @@
+solution = lambda before, after: 1 if sorted(before)==sorted(after) else 0
