@@ -1,1 +1,1 @@
-solution = lambda array, n: min(sorted(array), key=lambda i: (i-n)**2)
+solution = lambda array, n: min(sorted(array), key=lambda i: abs(i-n))
