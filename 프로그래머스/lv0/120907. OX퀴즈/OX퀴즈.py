@@ -1,0 +1,1 @@
+solution = lambda quiz: list(map(lambda x: 'O'if eval(x.replace('=','==')) else 'X',quiz))
