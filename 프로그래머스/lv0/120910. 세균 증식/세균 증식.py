@@ -1,0 +1,1 @@
+solution = lambda n, t: n << t
