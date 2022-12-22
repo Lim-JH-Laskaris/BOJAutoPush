@@ -1,0 +1,1 @@
+solution =lambda strlist : list(map(len,strlist))
