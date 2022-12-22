@@ -1,0 +1,2 @@
+solution = lambda s : sum(map(lambda i : 0 if 'Z' in i else int(i[0]),zip(s.split(),s.split()[1:]+[0])))
+# s.split() 리스트와 "그 원소들을 하나씩 앞당긴" 리스트를 zip으로 묶고, 둘중 하나라도 Z면 0이되게, 둘다 아니면 본래의 값이 정수화되어 출력되게 map을 실행시킨뒤 이를 모두 합한다.  
