@@ -1,1 +1,1 @@
-solution = lambda money : [money//5500,money%5500]
+solution = lambda money : divmod(money,5500) 
