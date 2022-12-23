@@ -1,0 +1,1 @@
+solution = lambda my_string, n : ''.join(map(lambda x:x*n,my_string))
