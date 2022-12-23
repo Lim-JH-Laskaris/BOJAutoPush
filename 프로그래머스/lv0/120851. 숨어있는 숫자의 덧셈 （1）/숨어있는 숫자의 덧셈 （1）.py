@@ -1,0 +1,1 @@
+solution = lambda my_string : sum(map(lambda x : int(x) if x.isdigit() else 0,list(my_string)))
