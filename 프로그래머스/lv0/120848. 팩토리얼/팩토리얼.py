@@ -1,0 +1,1 @@
+solution = lambda n,i=1,fac=1 : solution(n,i+1,fac*(i+1)) if fac<=n else i-1
