@@ -1,0 +1,1 @@
+solution = lambda s1, s2 : len(set(s1).intersection(s2))
