@@ -1,0 +1,1 @@
+solution = lambda str1, str2 : 2 - (str2 in str1)
