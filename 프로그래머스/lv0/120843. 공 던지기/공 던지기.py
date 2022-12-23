@@ -1,0 +1,1 @@
+solution = lambda numbers, k : (k-1)*2%len(numbers)+1
