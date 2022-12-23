@@ -1,0 +1,1 @@
+solution =  lambda my_str, n : [my_str[i*n:(i+1)*n] if (i+1)*n < len(my_str) else my_str[i*n:] for i in range((len(my_str)-1)//n +1)]
