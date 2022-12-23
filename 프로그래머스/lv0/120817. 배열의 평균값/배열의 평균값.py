@@ -1,0 +1,1 @@
+solution = lambda numbers : sum(numbers)/len(numbers)
