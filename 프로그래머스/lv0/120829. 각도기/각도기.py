@@ -1,0 +1,1 @@
+solution = lambda angle : 1 + angle//90 + (angle>90)
