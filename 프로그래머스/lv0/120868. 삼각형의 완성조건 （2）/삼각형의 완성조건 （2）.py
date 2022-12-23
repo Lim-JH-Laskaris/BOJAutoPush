@@ -1,0 +1,1 @@
+solution = lambda sides : sum(sides) - abs(sides[0]-sides[1]) -1
