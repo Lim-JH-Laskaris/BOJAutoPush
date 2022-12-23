@@ -1,0 +1,1 @@
+solution = lambda numbers, direction : [numbers[-1]]+numbers[:-1] if len(direction)-4 else numbers[1:]+[numbers[0]]
