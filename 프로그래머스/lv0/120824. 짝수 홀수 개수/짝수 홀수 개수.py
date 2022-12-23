@@ -1,0 +1,1 @@
+solution = lambda num_list : [sum(map(lambda x:x%2==0,num_list)), sum(map(lambda x:x%2,num_list))]
