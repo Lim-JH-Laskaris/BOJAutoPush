@@ -1,1 +1,1 @@
-solution = lambda age : "".join(map(lambda x:chr(97+int(x)), list(str(age))))
+solution = lambda age : "".join(map(lambda x:chr(97+int(x)), str(age)))
