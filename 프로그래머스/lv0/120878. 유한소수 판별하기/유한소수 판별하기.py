@@ -1,0 +1,1 @@
+solution = lambda a, b : 1 if (a*(10**10))%b==0 else 2
