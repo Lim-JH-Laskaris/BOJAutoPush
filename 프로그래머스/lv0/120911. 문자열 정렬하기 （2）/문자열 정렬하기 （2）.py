@@ -1,0 +1,1 @@
+solution = lambda my_string : ''.join(sorted(my_string.lower()))
