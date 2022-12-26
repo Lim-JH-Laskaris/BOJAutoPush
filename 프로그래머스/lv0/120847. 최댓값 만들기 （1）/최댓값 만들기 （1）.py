@@ -1,0 +1,1 @@
+solution = lambda numbers : numbers.pop(numbers.index(max(numbers)))*numbers.pop(numbers.index(max(numbers)))
