@@ -1,0 +1,1 @@
+solution = lambda nums : min(len(nums)//2, len(set(nums)))
