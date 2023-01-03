@@ -22,5 +22,5 @@ def solution(n):
     return multiply_all(list(map(lambda x:x+1, prime_factorization_list)))
 
 
-solution = lambda n : len(list(filter(lambda v: n % (v+1) == 0, range(n))))
+solution = lambda n : sum([1 for i in  range(n) if n % (i+1) == 0])
 
