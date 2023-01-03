@@ -22,5 +22,6 @@ def solution(n):
     return multiply_all(list(map(lambda x:x+1, prime_factorization_list)))
 
 
+"""아래처럼 그냥 냅다 비교하는 것이 더 빠르고 간결하다.."""
 solution = lambda n : sum([1 for i in  range(n) if n % (i+1) == 0])
 
