@@ -21,3 +21,6 @@ def solution(n):
         n, prime_factorization_list[i] = divide_t_time(n,prime_number_list[i])
     return multiply_all(list(map(lambda x:x+1, prime_factorization_list)))
 
+
+solution = lambda n : len(list(filter(lambda v: n % (v+1) == 0, range(n))))
+
