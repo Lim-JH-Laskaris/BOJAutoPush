@@ -1,0 +1,1 @@
+solution = lambda my_string, letter : my_string.replace(letter,'')
