@@ -1,0 +1,1 @@
+solution = lambda hp : hp//5 + [0,1,2,1,2][hp%5]
