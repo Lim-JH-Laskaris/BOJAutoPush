@@ -1,0 +1,1 @@
+solution = lambda my_string : sorted([int(i) for i in my_string if i.isdigit()])
