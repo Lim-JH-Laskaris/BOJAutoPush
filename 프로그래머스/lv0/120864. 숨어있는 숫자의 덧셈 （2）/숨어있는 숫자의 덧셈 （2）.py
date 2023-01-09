@@ -1,0 +1,1 @@
+solution = lambda my_string : sum(map(int,''.join([' 0' if not i.isdigit() else i for i in my_string]).split()))
