@@ -1,0 +1,1 @@
+solution = lambda num_list, n : [num_list[i*n:(i+1)*n] for i in range(len(num_list)//n)]
