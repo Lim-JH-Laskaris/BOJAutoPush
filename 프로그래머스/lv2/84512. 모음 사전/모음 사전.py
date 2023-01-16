@@ -1,21 +1,4 @@
 solution=lambda word:len(word)+sum(['AEIOU'.index(word[i])*[781,156,31,6,1][i] for i in range(len(word))])
-def solution(word):
-    c = 0 
-    for i1 in 'AEIOU':
-        c+=1
-        if word == i1 : return c
-        for i2 in 'AEIOU':
-            c+=1
-            if word == i1+i2 : return c
-            for i3 in 'AEIOU':
-                c+=1
-                if word == i1+i2+i3 : return c
-                for i4 in 'AEIOU':
-                    c+=1
-                    if word == i1+i2+i3+i4 : return c
-                    for i5 in 'AEIOU':
-                        c+=1
-                        if word == i1+i2+i3+i4+i5 : return c
 
 """
 #아래는 가장 기본적인 완전탐색법
