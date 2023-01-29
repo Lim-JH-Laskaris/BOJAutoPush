@@ -1,10 +1,9 @@
 def solution(X, Y):
     set_XY = set(X).intersection(Y)
-    print(set_XY)
-    answer = ''
     if not set_XY : return "-1"
     elif set_XY == {'0'} : return '0'
     else: 
+        answer = ''
         for i in sorted(list(set_XY), reverse=True):
             answer = answer + i*min(X.count(i),Y.count(i))
         return answer 
