@@ -2,14 +2,15 @@ def solution(X, Y):
     set_XY = set(X).intersection(Y)
     print(set_XY)
     answer = ''
-    if set_XY :
-        if set_XY == {'0'} :return '0'
-        else: 
-            for i in sorted(list(set_XY), reverse=True):
-                answer = answer + i*min(X.count(i),Y.count(i))
-            return answer 
-    else : return "-1"
-
+    if not set_XY : return "-1"
+    elif set_XY == {'0'} : return '0'
+    else: 
+        for i in sorted(list(set_XY), reverse=True):
+            answer = answer + i*min(X.count(i),Y.count(i))
+        return answer 
+ 
+# 아래 코드 마지막의 str(int(answer))는 '00'을 '0'으로 바꾸기 위해 사용했는데,
+# 긴 문자열의 경우 형변환에 불필요하게 시간이 오래걸려서 11~15케이스에서 시간초과가 떴다.
 
 # from collections import Counter
 
