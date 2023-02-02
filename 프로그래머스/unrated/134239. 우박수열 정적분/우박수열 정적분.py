@@ -18,7 +18,7 @@ def collatz_integral(collatz_list, inte_range): #우박수열과 범위 주어�
     else : return sum(col_li[start:end_plus+1]) - (col_li[start]+col_li[end_plus])/2
     # 예를들어, (0,a),(1,b),(2,c)의 적분은 (a+b)/2 + (b+c)/2 = a+b+c - (a+c)/2
 
-def solution(k, ranges):
+def solution(k, ranges): # k부터 시작하는 우박수열을 얻고 우박수열의 각 범위에 해당하는 정적분 값을 리스트로 반환
     collatz_list = collatz_listing(k)
     answer = [collatz_integral(collatz_list, inte_range) for inte_range in ranges]
     return answer
