@@ -1,4 +1,3 @@
-#
 def collatz_next(k): # 다음 우박수 리턴 # 단, k=1이면 4 리턴
     if k%2 == 0 : return k//2
     else : return 3*k + 1
