@@ -1,10 +1,9 @@
 from collections import deque
 
-
 def differs_by_only_one(a,b):
     """a와 b가 알파벳 하나만 다르고 나머지는 같은지를 반환. 
     두 철자 이상 다르거나 모두 같으면 False 반환"""
-    different_letter_num = sum([ aa!=bb for aa,bb in zip(a,b)])
+    different_letter_num = sum([aa!=bb for aa,bb in zip(a,b)])
     return True if different_letter_num==1 else False
 
 def solution(begin, target, words):
@@ -20,4 +19,4 @@ def solution(begin, target, words):
             words_dict[w] = words_dict[pop]+1
             words.remove(w)
             queue.append(w)
-    return 0
+    return 0 # while문에서 target에 도달하지 못하였으므로 변환할 수 없는 경우에 해당
