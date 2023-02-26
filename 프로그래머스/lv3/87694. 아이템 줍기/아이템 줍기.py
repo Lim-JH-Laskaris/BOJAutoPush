@@ -77,8 +77,8 @@ def min_distance(link_map, item, point, prev = None, c=0):
                 for path in link_map[point] if path != prev])
 
 def solution(rectangle, characterX, characterY, itemX, itemY):
-    start = (characterX, characterY)
     link_map = LinkMap(rectangle)
     link_map = remove_inside_path(link_map)
     item = (itemX, itemY)
+    start = (characterX, characterY)
     return min_distance(link_map, item, start)
