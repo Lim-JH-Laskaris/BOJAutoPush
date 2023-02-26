@@ -28,7 +28,7 @@ def angle_of_rotation(a,b):
         a: 기준벡터 (x좌표,y좌표)  
         b: 대상벡터 (x좌표,y좌표)  
     Return:
-        int
+        두 벡터의 사잇각(회전각)을 구하는 공식 적용. int
     '''
     xa,ya = a
     xb,yb = b
