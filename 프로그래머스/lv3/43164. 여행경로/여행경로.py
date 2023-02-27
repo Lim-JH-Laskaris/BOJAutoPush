@@ -9,5 +9,6 @@ def dfs(tickets,departure='ICN',root=[]):
     return None
 
 def solution(tickets):
-    tickets.sort(key = lambda x : (x[0],x[1])) # 알파벳 순으로 앞선 경로를 따르기 위해 정렬 # x[1]만 해도 됨
+    tickets.sort(key = lambda x : x[1]) #알파벳 순으로 앞선 경로를 먼저 탐색하여 제출하기위한 정렬.
     return dfs(tickets)
+
