@@ -1,5 +1,5 @@
 from collections import deque
-
+#BFS 알고리즘 이용
 def solution(n, computers):
     answer = 0
     check_list = [0]*n   
