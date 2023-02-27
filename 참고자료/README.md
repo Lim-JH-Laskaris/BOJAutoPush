@@ -31,4 +31,4 @@
 * defaultdict : https://dongdongfather.tistory.com/69
     - defaultdict는 주어진 객체의 기본값을 설정 가능. dfd = defaultdict(list) 처럼. https://dongdongfather.tistory.com/69
 * deque과 기본리스트의 시간복잡도 비교 : https://wellsw.tistory.com/122
-    - extend,extendleft 가능
+    - extend,extendleft : 여러개 추가 가능
