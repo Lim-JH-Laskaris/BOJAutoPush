@@ -2,7 +2,7 @@ def solution(land):
     next_land = land.pop()
     while land :
         priv_land = land.pop()
-        next_land = [max([priv_land[i]+next_land[j] 
+        next_land = [priv_land[i]+max([next_land[j] 
                           for j in range(4) if j!=i]) 
                      for i in range(4)] 
     return max(next_land)
