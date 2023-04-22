@@ -1,3 +1,4 @@
+
 from collections import deque
 def solution(money):
     if len(money)==3 : #세집일때
