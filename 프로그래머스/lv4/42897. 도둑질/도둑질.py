@@ -18,3 +18,5 @@ def solution(money):
         s[i] = max(s[i-1],s[i-2]+money[i])
     answer2 = s[-2] + money[-1]
     return max(answer1,answer2)
+
+# <이코테> p220 개미전사 문제 해법 참고 
