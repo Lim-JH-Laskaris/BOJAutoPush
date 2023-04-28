@@ -1,0 +1,1 @@
+solution = lambda t,f: [t for t,f in zip(t,f) if not f]
