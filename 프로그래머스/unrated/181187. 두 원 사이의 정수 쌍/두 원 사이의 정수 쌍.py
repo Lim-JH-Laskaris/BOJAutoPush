@@ -2,10 +2,10 @@
 
 def solution(r1, r2):
     answer = 0
-    # 우선 하나의 사분면에서만 계산 
-    for i in range(0,r2): # r2포함 점 셈. 단 y축 상의 점 빼고
+    # 우선 1사분면+y축(y>0) 에서만 계산. x축 제외 
+    for i in range(r2): # r2포함 점 셈. 
         answer += int((r2**2-i**2)**.5)
-    for i in range(0,r1): # r1포함 점 뺌. 단 y축 상의 점 빼고
+    for i in range(r1): # r1포함 점 뺌. 
         answer -= int((r1**2-i**2)**.5)
         if int((r1**2-i**2)**.5) == (r1**2-i**2)**.5 : 
             answer += 1 # r1의 경계에 있는 점 다시 추가
