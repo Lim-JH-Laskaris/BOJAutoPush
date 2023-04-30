@@ -32,3 +32,10 @@
     - defaultdict는 주어진 객체의 기본값을 설정 가능. dfd = defaultdict(list) 처럼. https://dongdongfather.tistory.com/69
 * deque과 기본리스트의 시간복잡도 비교 : https://wellsw.tistory.com/122
     - extend,extendleft : 여러개 추가 가능
+    
+### functools 관련 내용
+[프로그래머스-숫자 카드 나누기](../../../tree/main/프로그래머스/unrated/135807.숫자 카드 나누기)
+* 누계함수 reduce(집계 함수, 순회 가능한 데이터[, 초기값]) / from functools import reduce
+    - [docs](https://docs.python.org/ko/3/library/functools.html#functools.reduce)
+    - ex1) reduce(lambda x, y: x+y, [1, 2, 3, 4, 5])는 다음과 같이 계산 ((((1+2)+3)+4)+5)
+    - n개의 수에 대한 최대 공약수 : from math import gcd; reduce(gcd, nums_list)
