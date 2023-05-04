@@ -1,1 +1,1 @@
-solution = lambda n : str(bin(n)).count('1')
+solution = lambda n : bin(n).count('1')
