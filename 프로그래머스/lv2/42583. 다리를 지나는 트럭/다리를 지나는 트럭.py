@@ -15,3 +15,5 @@ def solution(bridge_length, weight, truck_weights):
         t += 1
     return t
 
+# 맨처음에 " 무게가 [7, 4, 5, 6]kg인 트럭이 순서대로 " 라는 부분을 놓쳐서, 정렬하고이분탐색하고..... 불필요한 일을 하느라 시간을 잡아먹었다. 
+
