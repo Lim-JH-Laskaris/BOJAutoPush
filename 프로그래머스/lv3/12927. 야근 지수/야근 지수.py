@@ -20,3 +20,11 @@ def solution(n, works):
         heappush(works, min(heappop(works)+1,0))
     return sum([w**2 for w in works])
 """ := 대입과 할당을 동시에."""
+
+def solution(n, works):
+    """약간의 효율성 개선 코드"""
+    if sum(works)<=n : return 0 # 야근 없는 경우
+    heapify(works := [-w for w in works])
+    for _ in range(n):
+        if (p := heappop(works)+1)<0 : heappush(works, p) 
+    return sum([w**2 for w in works])
