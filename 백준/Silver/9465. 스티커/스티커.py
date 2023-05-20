@@ -1,14 +1,19 @@
 def dp():
-    n = int(input())
+    n = int(input()) #스티커 열
     s = list(zip(list(map(int,input().split())),
                  list(map(int,input().split()))))
-    if n==1 : return max(s[0])
-    (a1, b1), (a2, b2) = s[0], s[1]
-    (a2, b2) = (a2+b1, b2+a1)
-    if n==2 : return max(a2,b2)
-    for i in range(2,n):
-        (a3, b3) = s[i]
+        # 스티커 배열 [[위1,아래1],[위2,아래2], ....[위n,아래n]]
+    if n==1 : return max(s[0])      # 스티커 1열 뿐이면 최대값 단순 반환
+    (a1, b1), (a2, b2) = s[0], s[1] # 초기화. (위1,아래1),(위2,아래2)
+    (a2, b2) = (a2+b1, b2+a1)       # a2,b2 각각을 뜯을 때, 함께 뜯을 수 있는 1열 스티커의 점수 더함. 
+    if n==2 : return max(a2,b2)     # 스티커가 최대 2열까지라면, a2,b2중 최대값 반환
+    for i in range(2,n): # 누적 합을 구하는 다이나믹 프로그래밍 과정 수행.
+        (a3, b3) = s[i]  # 다음 열의 스티커 값을 받아온다. 
         (a1, b1), (a2, b2) = (a2, b2),(a3+max(b1,b2),b3+max(a1,a2))
+            # a3을 뜯을 때, b3,a2는 같이 뜯는 것이 불가능하며, a1는 b2의 누적 점수에 이미 반영되어있어 제외.
+            # 또한 a1,b1 이전의 스티커들도 마찬가지로 이미 누적합에 반영되어 있기 때문에 고려 하지 않는다.
+            # 따라서 a3을 뜯는다 가정할때 최대 누적합은, a3에 b1,b2중 큰 값을 더한 값이 된다.
+            # b3에 대해서도 마찬가지.
     return max(a2,b2)
 
 for _ in range(int(input())):
