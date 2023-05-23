@@ -39,3 +39,6 @@
     - [docs](https://docs.python.org/ko/3/library/functools.html#functools.reduce)
     - ex1) reduce(lambda x, y: x+y, [1, 2, 3, 4, 5])는 다음과 같이 계산 ((((1+2)+3)+4)+5)
     - n개의 수에 대한 최대 공약수 : from math import gcd; reduce(gcd, nums_list)
+
+### sys 관련
+* 재귀 한계 재설정 : sys.setrecursionlimit(10**5)
