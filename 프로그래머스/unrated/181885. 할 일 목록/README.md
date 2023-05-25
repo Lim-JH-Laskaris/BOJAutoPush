@@ -1,10 +1,10 @@
 # [unrated] 할 일 목록 - 181885 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181885) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181885?language=javascript) 
 
 ### 성능 요약
 
-메모리: 10.1 MB, 시간: 0.01 ms
+메모리: 33.4 MB, 시간: 0.05 ms
 
 ### 구분
 
