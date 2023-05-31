@@ -1,8 +1,7 @@
 function solution(arr1, arr2) {
-    let answer = 0
     const arrSub = arr1.length - arr2.length;
+    if (arrSub != 0) {return arrSub/Math.abs(arrSub)}
     const sumSub = arr1.reduce((a, b) => a + b, 0) - arr2.reduce((a, b) => a + b, 0);
-    if (arrSub != 0) {answer =  arrSub/Math.abs(arrSub)}
-    else { if (sumSub != 0) {answer = sumSub/Math.abs(sumSub)}}
-    return answer
+    if (sumSub != 0) {return sumSub/Math.abs(sumSub)}
+    return 0
 }
