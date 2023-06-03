@@ -1,7 +1,7 @@
 from collections import deque
 
 def solution(queue1, queue2):
-    q1, q2 = deque(queue1), deque(queue2)
+    q1,q2 = deque(queue1), deque(queue2)
     s1,s2 = sum(q1),sum(q2)
     l1,l2 = len(q1),len(q2)
     c = 0
